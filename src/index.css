@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'tan-pearl-webfont';
+  src: url('/fonts/tan-pearl-webfont.woff2') format('woff2'),
+       url('/fonts/tan-pearl-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 80%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html, body, #root {
+  overflow-x: hidden;
+}
+
+  body {
+    @apply bg-background text-foreground font-tajawal;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@layer components {
+  .cursor-glow {
+    @apply relative transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)];
+  }
+
+  .nav-link {
+    @apply relative text-white/70 hover:text-white transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-white/15;
+  }
+
+  .icon-hover {
+    @apply grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110;
+  }
+
+  .floating-bg {
+    position: absolute;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+    pointer-events: none;
+  }
+}
