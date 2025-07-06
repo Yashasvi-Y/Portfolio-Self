@@ -19,7 +19,7 @@ const Work = () => {
       tech: ["React", "Tailwind", "emailjs"],
       type: "Web App",
       image: "/images/portfolio-Yashasvi.png",
-      github: "https://github.com/Yashasvi-Y/Portfolio-Self.git",
+      github: "https://github.com/Yashasvi-Y/Portfolio-Self",
       live: "https://yashasviyadav.netlify.app/",
     },
     {
