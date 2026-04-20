@@ -4,14 +4,20 @@ const Work = () => {
   const projects = [
     {
       title: "WebMaster - IIIT KOTA",
-      tech: ["Web Dev", "UX", "UI"],
+      tech: ["Web Dev", "UX/UI", "Teamwork"],
       type: "Work Experience",
       image: "/images/webmaster.png",
     },
     {
+      title: "VP, CACS - IIIT KOTA",
+      tech: ["Leadership", "Event Management"],
+      type: "Co-curricular",
+      image: "/images/cacs.png",
+    },
+    {
       title: "Content writer + Social Media Handler",
       tech: ["content writing", "management"],
-      type: "co-curricular",
+      type: "Co-curricular",
       image: "/images/neon.png",
     },
     {
@@ -23,15 +29,15 @@ const Work = () => {
       live: "https://yashasviyadav.netlify.app/",
     },
     {
-      title: "Project 1 - Resume Builder",
+      title: "Resume Builder",
       tech: ["MERN stack", "JWT", "AI API Integration"],
       type: "Web App",
-      image: "/images/restaurant-project.png",
-      github: "https://github.com/Yashasvi-Y/Restaurant-Project",
+      image: "/images/ResumeBuilder.png",
+      github: "https://github.com/Yashasvi-Y/ResumBuilder-Frontend",
       live: "https://buildingresumelive.netlify.app/",
     },
     {
-      title: "Project 2 - INDRIYA",
+      title: "INDRIYA",
       tech: ["MERN stack", "RBAC", "JWT", "REST APIs"],
       type: "Web App",
       image: "/images/restaurant-project.png",
@@ -93,8 +99,8 @@ const Work = () => {
                 </div>
 
                 {/* Tech Tags & Links */}
-                <div className="flex flex-wrap justify-between items-center gap-2">
-                  <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap  items-center gap-2">
+                  <div className="flex flex-wrap gap-2 flex-1 min-w-0">
                     {project.tech.map((tech, i) => (
                       <span
                         key={i}
@@ -105,7 +111,7 @@ const Work = () => {
                     ))}
                   </div>
 
-                  <div className="flex gap-3 mt-3">
+                  <div className="flex gap-3 shrink-0 ml-auto">
                     {project.github && (
                       <a
                         href={project.github}
