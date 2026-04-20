@@ -23,12 +23,20 @@ const Work = () => {
       live: "https://yashasviyadav.netlify.app/",
     },
     {
-      title: "Project 1 - INDRIYA",
-      tech: ["React", "CSS"],
+      title: "Project 1 - Resume Builder",
+      tech: ["MERN stack", "JWT", "AI API Integration"],
       type: "Web App",
       image: "/images/restaurant-project.png",
       github: "https://github.com/Yashasvi-Y/Restaurant-Project",
-      live: "https://project2.live",
+      live: "https://buildingresumelive.netlify.app/",
+    },
+    {
+      title: "Project 2 - INDRIYA",
+      tech: ["MERN stack", "RBAC", "JWT", "REST APIs"],
+      type: "Web App",
+      image: "/images/restaurant-project.png",
+      github: "https://github.com/Yashasvi-Y/Restaurant-Project",
+      live: "https://indriya-restaurant.netlify.app/",
     },
   ];
 
